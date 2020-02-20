@@ -1,0 +1,76 @@
+.header
+	border-bottom: 2px solid #fff
+	&-content
+		padding-top: 20px
+		padding-bottom: 15px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		align-items: center
+		padding-left: 3.75%
+		padding-right: 3.75%
+	&-list
+		padding: 0
+		margin: 0
+		list-style-type: none
+		display: flex
+		&__item
+			margin-right: 25px
+			&:last-child
+				margin-right: 0
+		&__link
+			display: inline-block
+			fill: #fff
+			transition: 0.25s ease-in
+			&:hover
+				fill: #af8
+			svg
+				width: 25px
+				max-height: 27px
+	&-logo
+		svg
+			width: 100px
+	&-cta
+		display: flex
+		align-items: center
+		&__search
+			margin-right: 40px
+			transition: 150ms ease
+			&:hover
+				opacity: 0.8
+			svg
+				width: 20px
+				height: 25px
+				fill: #fff
+		&__sub
+			padding: 15px 20px
+			background-color: #fff
+			border-radius: 10px
+			font-weight: 800
+			text-decoration: none
+			text-transform: uppercase
+			letter-spacing: 1px
+			color: #000
+			transition: 0.3s ease-in-out
+			&:hover
+				background-color: #000
+				color: #fff
+
+
+@media (max-width: 650px)
+	.header
+		&-logo
+			order: -2
+		&-list
+			display: none
+
+@media (max-width: 420px)
+	.header
+		&-content
+			padding-top: 10px
+			padding-bottom: 5px
+		&-cta
+			&__search
+				display: none
+			&__sub
+				padding: 15px
