@@ -1,0 +1,207 @@
+.main
+
+	#instafeed
+		width: 100%
+		min-height: 400px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		.inst-img
+			width: 120px
+			height: 100px
+			background-size: cover	
+			margin-bottom: 20px
+
+	.container
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+	&-right
+		flex-basis: 23%
+		margin-top: 60px
+		text-align: center
+
+
+	&-left
+		flex-basis: 75%
+
+	&-naming
+		font-size: 18px
+		margin: 0
+		letter-spacing: 1px
+		border: 2px solid #fff
+		font-weight: 500
+		padding: 20px 0
+		margin-bottom: 50px
+	&-posts
+		&__img
+			width: 80px
+			height: 80px
+			border-radius: 50%
+			background-color: #fff
+			margin: auto
+			&_1
+				background: url('../img/new-1.jpg') center/cover no-repeat
+			&_2
+				background: url('../img/new-2.jpg') center/cover no-repeat
+			&_3
+				background: url('../img/new-3.jpg') center/cover no-repeat
+			&_4
+				background: url('../img/new-4.jpg') center/cover no-repeat
+			&_5
+				background: url('../img/new-5.jpg') center/cover no-repeat
+		&__title
+			font-size: 20px
+			letter-spacing: 0.7px
+			margin: 0
+			font-weight: 400
+			margin-top: 25px
+		&__time
+			font-size: 12px
+			margin: 0
+			display: inline-block
+			text-transform: uppercase
+			margin-top: 15px
+			color: #aaa
+			font-family: 'Tahoma', sans-serif
+			letter-spacing: 0.5px
+		&__item
+			display: inline-block
+			text-decoration: none
+			color: #fff
+			padding-bottom: 35px
+			border-bottom: 1px solid #fff
+			margin-bottom: 30px
+			&:last-child
+				border: none
+
+
+
+
+
+
+
+	.new
+		margin-top: 60px
+		padding-bottom: 40px
+		border-bottom: 1px solid #fff
+		&-title
+			margin: 0
+			font-size: 40px
+			text-align: center
+			font-weight: 400
+		&-time
+			font-size: 14px
+			text-transform: uppercase
+			color: #aaa
+			text-align: center
+			margin: 0
+			margin-top: 15px
+			text-align: center
+			display: block
+			font-family: 'Tahoma', sans-serif
+			letter-spacing: 1px
+		&-text
+			font-size: 16px
+			line-height: 1.8
+			color: #00f230
+			margin-top: 25px
+			letter-spacing: 0.4px
+		&-img
+			margin-top: 35px
+			width: 100%
+			min-height: 360px
+			&_1
+				background: url('../img/new-1.jpg') center/cover no-repeat
+			&_2
+				background: url('../img/new-2.jpg') center/cover no-repeat
+			&_3
+				background: url('../img/new-3.jpg') center/cover no-repeat
+			&_4
+				background: url('../img/new-4.jpg') center/cover no-repeat
+			&_5
+				background: url('../img/new-5.jpg') center/cover no-repeat
+
+		&-bottom
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin-top: 30px
+			&-list
+				display: flex
+				justify-content: center
+				align-items: center
+				list-style-type: none
+				padding: 0
+				margin: 0
+				&__item
+					margin-right: 25px
+					&:last-child
+						margin-right: 0
+				&__link
+					fill: #fff
+					display: inline-block
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 25px
+					height: 28px
+					transition: 0.4s ease
+					&:hover
+						fill: #ff0036
+					svg
+						width: 25px
+						max-height: 28px
+			&__read
+				background-color: #fff
+				text-decoration: none
+				color: #000
+				display: inline-block
+				font-weight: 800
+				padding: 10px 15px
+				border-radius: 3px
+
+
+	&-list
+		padding: 0
+		margin: 0
+		display: flex
+		list-style-type: none
+		justify-content: flex-end
+		position: absolute
+		left: 50%
+		transform: translate(-50%)
+		&__item
+			margin-right: 20px
+			font-size: 18px
+			font-family: 'Tahoma', sans-serif
+			&:last-child
+				margin-right: 0
+		&__link
+			text-decoration: none
+			color: #fff
+			&:hover
+				color: #00f230
+			&_active
+				color: #ff0036
+
+
+	&-footer
+		display: flex
+		position: relative
+		justify-content: flex-end
+		align-items: center
+		margin-top: 35px
+		padding-bottom: 75px
+		&__more
+			text-decoration: none
+			color: #00f230
+			letter-spacing: 0.5px
+			&:hover
+				text-decoration: underline
+
+
+
+
+
