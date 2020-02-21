@@ -37,12 +37,35 @@
 			margin-right: 40px
 			transition: 150ms ease
 			margin-top: 5px
+			background-color: transparent
+			border: none
+			cursor: pointer
+			&:focus + .header-cta__input
+				opacity: 1
+				visibility: visible
 			&:hover
 				opacity: 0.8
 			svg
 				width: 20px
 				height: 25px
 				fill: #fff
+		&__input
+			opacity: 0
+			visibility: hidden
+			transition: 0.4s ease-in-out
+			background-color: transparent
+			position: absolute
+			left: -145px
+			outline: none
+			top: 5px
+			padding: 6px
+			width: 140px
+			border: none
+			color: #fff
+			border: 1px solid #fff
+			&:focus
+				opacity: 1
+				visibility: visible
 		&__sub
 			padding: 15px 20px
 			background-color: #fff
@@ -57,6 +80,16 @@
 				background-color: #00f230
 				color: #111
 
+	&-form
+		position: relative
+
+@media(max-width: 800px)
+	.header
+		&-cta
+			&__input
+				width: 80px
+				left: -85px
+
 
 @media (max-width: 650px)
 	.header
@@ -67,6 +100,7 @@
 
 @media (max-width: 420px)
 	.header
+		height: 85px
 		&-content
 			padding-top: 10px
 			padding-bottom: 5px

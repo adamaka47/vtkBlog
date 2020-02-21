@@ -9,3 +9,21 @@ let userFeed = new Instafeed({
 
 
 userFeed.run();
+
+
+const header = document.querySelector('header')
+
+document.addEventListener('scroll', function(e) {
+	if (this.documentElement.scrollTop > 200) {
+		header.classList.add('fixed')
+		main.classList.add('pt100')
+	} else {
+		header.classList.remove('fixed')
+		main.classList.remove('pt100')
+	}
+})
+
+
+document.querySelector('.header-form').onsubmit = function(e) {
+	e.preventDefault();
+}
