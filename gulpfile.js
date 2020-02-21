@@ -20,7 +20,7 @@ const replace = require('gulp-replace')
 
 gulp.task('sass', function(cb) {
 
-	return gulp.src('./src/sass/main.sass')
+	return gulp.src('./docs/sass/main.sass')
 		.pipe(plumber({
 			errorHandler: notify.onError(function(err) {
 				return {
@@ -38,7 +38,7 @@ gulp.task('sass', function(cb) {
 			overrideBrowserslist: ['last 4 versions']
 		}))
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('./src/css/'))
+		.pipe(gulp.dest('./docs/css/'))
 		.pipe(bs.stream())
 })
 
@@ -48,7 +48,7 @@ gulp.task('server', function() {
 	bs.init({
 
 		server: {
-			baseDir: './src/'
+			baseDir: './docs/'
 		}
 
 	})
@@ -57,7 +57,7 @@ gulp.task('server', function() {
 
 gulp.task('svg', function() {
 
-	return gulp.src('./src/img/**/*.svg')
+	return gulp.src('./docs/img/**/*.svg')
 		.pipe(svgmin({
 			js2svg: {
 				pretty: true
@@ -79,18 +79,18 @@ gulp.task('svg', function() {
 				}
 			}
 		}))
-		.pipe(gulp.dest('src/img'))
+		.pipe(gulp.dest('docs/img'))
 
 })
 
 gulp.task('html', function() {
 
-	return gulp.src('src/html/*.html')
+	return gulp.src('docs/html/*.html')
 		.pipe(gulpinclude({
 			prefix: '@@'
 		}))
 
-		.pipe(gulp.dest('src/'))
+		.pipe(gulp.dest('docs/'))
 		.pipe(bs.stream())
 
 
@@ -99,12 +99,12 @@ gulp.task('html', function() {
 
 gulp.task('js', function() {
 
-	return gulp.src('src/js/script.js')
+	return gulp.src('docs/js/script.js')
 		.pipe(rename('scriptvar.js'))
 		.pipe(babel({
 			presets: ['@babel/env']
 		}))
-		.pipe(gulp.dest('src/js/'))
+		.pipe(gulp.dest('docs/js/'))
 		.pipe(bs.stream())
 
 
@@ -112,9 +112,9 @@ gulp.task('js', function() {
 
 gulp.task('imagemin', function() {
 
-	return gulp.src('src/img/**/*.*')
+	return gulp.src('docs/img/**/*.*')
 		.pipe(imagemin())
-		.pipe(gulp.dest('src/img'))
+		.pipe(gulp.dest('docs/img'))
 		.pipe(bs.stream())
 
 })
@@ -122,11 +122,11 @@ gulp.task('imagemin', function() {
 
 gulp.task('watch', function() {
 
-	watch('src/html/**/*.html', gulp.parallel('html'))
+	watch('docs/html/**/*.html', gulp.parallel('html'))
 
-	watch('src/sass/**', gulp.parallel('sass'))
+	watch('docs/sass/**', gulp.parallel('sass'))
 
-	watch('src/js/script.js', gulp.parallel('js'))
+	watch('docs/js/script.js', gulp.parallel('js'))
 
 
 
